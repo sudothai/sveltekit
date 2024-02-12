@@ -1,6 +1,9 @@
 {
 	"name": "sveltekit",
 	"version": "0.0.1",
+	"prisma": {
+		"seed": "pnpx vite-node prisma/seed.ts"
+	},
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -36,6 +39,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@picocss/pico": "^2.0.0"
+		"@picocss/pico": "^2.0.0",
+		"@prisma/client": "^5.9.1"
 	}
 }
