@@ -1,4 +1,22 @@
 <script lang="ts">
+    import type { PageData } from './$types'
+
+    export let data: PageData
+</script>
+
+<h1>Posts</h1>
+
+<p>Showing {data.posts.length} posts.</p>
+
+{#each data.posts as post}
+    <ul>
+        <li>
+            <a href="/posts/{post.slug}">{post.title}</a>
+        </li>
+    </ul>
+{/each}
+
+<!-- <script lang="ts">
     import type { Post } from '@prisma/client'
 
     async function getPosts() {
@@ -27,7 +45,7 @@
     {/each}
 {:catch error}
     <p>{error.message}</p>
-{/await}
+{/await} -->
 
 <!-- <script lang="ts">
     async function subscribe(event: Event) {
